@@ -1,5 +1,5 @@
 
-# Gemini Spot the Difference Generator
+# Prompt to Puzzle
 
 **A submission for the Google AI Multi-Modal Challenge.**
 

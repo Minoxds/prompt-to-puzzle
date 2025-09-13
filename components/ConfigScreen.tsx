@@ -98,7 +98,7 @@ const ConfigScreen: React.FC<ConfigScreenProps> = ({ onStartGenerator, onStartPl
     <div className="min-h-screen bg-brand-bg text-text-main font-sans flex flex-col items-center justify-center p-4">
        <header className="w-full p-4 border-b border-border-color flex justify-between items-center bg-surface/50 backdrop-blur-sm fixed top-0 left-0">
         <h1 className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
-          AI Spot the Difference
+          Prompt to Puzzle
         </h1>
         <a href="https://github.com/seehiong" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
           <GithubIcon />

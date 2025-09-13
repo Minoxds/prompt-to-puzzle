@@ -16,7 +16,7 @@ const GameBrowserScreen: React.FC<GameBrowserScreenProps> = ({ games, isLoading,
     <div className="min-h-screen bg-brand-bg text-text-main font-sans flex flex-col">
        <header className="w-full p-4 border-b border-border-color flex justify-between items-center bg-surface/50 backdrop-blur-sm sticky top-0 z-10">
         <h1 className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
-          AI Spot the Difference
+          Prompt to Puzzle
         </h1>
         <a href="https://github.com/seehiong" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary transition-colors">
           <GithubIcon />
