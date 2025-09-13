@@ -1,0 +1,5 @@
+{
+  "name": "gemini-spot-the-diff-generator",
+  "description": "An AI-powered web application that generates 'Spot the Difference' games. Users can specify a theme and the number of differences, and the app will produce two similar images side-by-side for the game.",
+  "requestFramePermissions": []
+}

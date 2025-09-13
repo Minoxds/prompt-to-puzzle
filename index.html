@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Spot the Difference Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#121212',
+              'surface': '#1e1e1e',
+              'primary': '#6366f1',
+              'primary-hover': '#4f46e5',
+              'text-main': '#e0e0e0',
+              'text-secondary': '#a0a0a0',
+              'border-color': '#333333',
+            },
+            keyframes: {
+              'score-bump': {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.5)' },
+              },
+              'countdown-zoom': {
+                '0%': { transform: 'scale(0.5)', opacity: '0' },
+                '20%': { transform: 'scale(1.2)', opacity: '1' },
+                '80%': { transform: 'scale(1)', opacity: '1' },
+                '100%': { transform: 'scale(1.5)', opacity: '0' },
+              },
+            },
+            animation: {
+              'score-bump': 'score-bump 0.3s ease-in-out',
+              'countdown-zoom': 'countdown-zoom 1s ease-out',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.18.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "appwrite/": "https://aistudiocdn.com/appwrite@^15.0.0/",
+    "appwrite": "https://aistudiocdn.com/appwrite@^15.0.0",
+    "node-appwrite": "https://aistudiocdn.com/node-appwrite@^19.0.0",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "vite": "https://aistudiocdn.com/vite@^7.1.5"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-bg text-text-main">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
